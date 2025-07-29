@@ -5,7 +5,11 @@ LLM4Rail is an LLM-based railway platform using an iterative QTAO framework to c
 <!-- Illustration of LLM4Rail -->
 <img src="asset/website.png">
 
-# Requirements
+# 📌 Website
+
+You can get started with LLM4Rail on its official website: http://111.170.34.203/
+
+# 🚀 Requirements
 
 - Python == 3.12
 - openai == 1.97.0
@@ -16,7 +20,7 @@ LLM4Rail is an LLM-based railway platform using an iterative QTAO framework to c
 - tqdm == 4.67.1
 - transformers == 4.49.0
 
-# Evaluation
+# 🌟 Evaluation
 
 ## 1. Set Working Directory
 Set the working directory to the project root.
@@ -38,7 +42,7 @@ python evaluation/<task>/query_generator.py
 `<task>`: `weather` or `ticket` <br>
 If you want to evaluate recommendation module, skip this step.
 
-## 4. Evaluate Weather/Ticket Inquiry Module
+## 4. Evaluate Weather/Ticket Inquiry Module 🌧🚅
 Run the script `evaluation/<task>/evaluate.py`.
 ```bash
 python evaluation/<task>/evaluate.py \
@@ -52,7 +56,7 @@ python evaluation/<task>/evaluate.py \
 ```
 `<model>`: `qwen-3` or `gpt-4o` <br>
 
-## 5. Evaluate Food & Drink Recommendation Module
+## 5. Evaluate Food & Drink Recommendation Module 🍔
 Run the script `evaluation/meal/evaluate.py`.
 ```bash
 python evaluation/meal/evaluate.py \
