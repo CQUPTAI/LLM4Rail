@@ -14,7 +14,7 @@ We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](
 novel LLM-based algorithm for zero-shot conversational recommendation. This approach leverages feature-based recommendation alignment to ensure all suggested items are grounded in the provided dataset.
 
 <!-- Illustration of Food & Drink Recommendation -->
-<div align="center"><img src="asset/recommendation.jpg" width=65% height=65%></div>
+<div align="center"><img src="asset/recommendation.jpg" width=70% height=70%></div>
 
 
 # 📌 Website
