@@ -14,15 +14,12 @@ LLM4Rail consists of four core modules: <br>
 <img src="asset/website_en2.png">
 
 ## 2.QTAO Prompting
-LLM4Rail utilizes the proposed iterative “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrates verbal reasoning with task-oriented actions.
-For instance, a user checks train ticket availability from Chongqing to Chengdu for tomorrow afternoon using the QTAO process.
-Passengers typically enter key parameters, such as the departure station, travel date, and destination. 
-These inputs are then used to search the database for the best matching train service.
-Once LLM4Rail recognizes the user's intent to inquire about ticket information, it triggers the execution of the “Ticket Inquiry” module at the “**Action**” step.
-It is interesting to note that LLM4Rail is equipped with the capability for ambiguous searching that when no perfect matching train services are found between Chongqing Station and Chengdu Station, the system automatically suggests alternatives from Chongqing North Station to Chengdu East Station.
-The “Ticket Inquiry” module realizes this by returning an error message to LLM4Rail at the “**Observation**” stage, indicating the failure reason that no direct train service exists between these two stations in the first round of QTAO process.
-In the next iteration of the process, the "Ticket Inquiry" module provides the closest alternative route, starting from Chongqing North Station to Chengdu East Station.
-In the subsequent round, three different train options are displayed for the passenger to choose from.
+We propose the “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrates verbal reasoning with task-oriented actions.
+When solving a task, QTAO follows an iterative reasoning process consisting of four distinct steps: 
+* **Question:** The initial prompts, together with the passenger’s query, are first fed into an LLM. <br>
+* **Thought:** By harnessing the LLM’s strong intent understanding capabilities, LLM4Rail infers the intention behind the passenger’s query. <br> 
+* **Action:** Based on this inferred intent, the system determines which external tool should be employed to address the request. <br>
+* **Observation:** The returned results by the selected tool are considered as external observations from the environment. <br>
 
 <!-- Illustration of QTAO -->
 <div align="center"><img src="asset/illustration_of_ticket_inquiry.jpg" width=90% height=90%></div>
