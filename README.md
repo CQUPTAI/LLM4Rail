@@ -3,7 +3,7 @@
 LLM4Rail is a novel LLM-augmented railway service consulting platform. Empowered by LLM, LLM4Rail can provide custom modules for ticketing, railway food & drink recommendations, weather information, and chit-chat.
 
 <!-- Illustration of LLM4Rail -->
-<img src="asset/website_en.png">
+<img src="asset/website_en2.png">
 
 LLM4Rail utilizes the proposed iterative “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrates verbal reasoning with task-oriented actions.
 
