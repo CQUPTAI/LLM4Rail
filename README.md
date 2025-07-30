@@ -5,10 +5,16 @@ LLM4Rail is a novel LLM-augmented railway service consulting platform. Empowered
 <!-- Illustration of LLM4Rail -->
 <img src="asset/website_en.png">
 
-LLM4Rail leverages the proposed iterative “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrate sverbal reasoning with task-oriented actions.
+LLM4Rail utilizes the proposed iterative “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrate sverbal reasoning with task-oriented actions.
 
 <!-- Illustration of QTAO -->
 <div align="center"><img src="asset/illustration_of_ticket_inquiry.jpg" width=90% height=90%></div>
+
+We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://anonymous.4open.science/r/CRFD25)) dataset. Based on the CRFD-25, we develop a
+novel LLM-based algorithm for zero-shot conversational recommendation. This approach leverages feature-based recommendation alignment to ensure all suggested items are grounded in the provided dataset.
+
+<!-- Illustration of Food & Drink Recommendation -->
+<div align="center"><img src="asset/recommendation.jpg" width=65% height=65%></div>
 
 
 # 📌 Website
