@@ -1,20 +1,39 @@
 # LLM4Rail
+This repo provides the source code & data of our paper: [LLM4Rail: An LLM-Augmented Railway Service Consulting Platform](www.baidu.com) (Arxiv 2025).
 
-LLM4Rail is a novel LLM-augmented railway service consulting platform. Empowered by LLM, LLM4Rail can provide custom modules for ticketing, railway food & drink recommendations, weather information, and chit-chat.
+# 🔍 Introduction
+## 1.LLM4Rail
+We implement LLM4Rail, a novel LLM-augmented railway service consulting platform.
+LLM4Rail consists of four core modules: <br>
+* **🚅Ticketing:** Provide up-to-date train ticket information, connection options and other travel suggestions. <br>
+* **🌭Meal:** Provide tailored food and beverage recommendations. <br>
+* **🌧Weather:** Provide the latest weather forecasts. <br>
+* **😄Chit-chat:** Chat for general questions and assistance.
 
 <!-- Illustration of LLM4Rail -->
 <img src="asset/website_en2.png">
 
+## 2.QTAO Prompting
 LLM4Rail utilizes the proposed iterative “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrates verbal reasoning with task-oriented actions.
+For instance, a user checks train ticket availability from Chongqing to Chengdu for tomorrow afternoon using the QTAO process.
+Passengers typically enter key parameters, such as the departure station, travel date, and destination. 
+These inputs are then used to search the database for the best matching train service.
+Once LLM4Rail recognizes the user's intent to inquire about ticket information, it triggers the execution of the “Ticket Inquiry” module at the “**Action**” step.
+It is interesting to note that LLM4Rail is equipped with the capability for ambiguous searching that when no perfect matching train services are found between Chongqing Station and Chengdu Station, the system automatically suggests alternatives from Chongqing North Station to Chengdu East Station.
+The “Ticket Inquiry” module realizes this by returning an error message to LLM4Rail at the “**Observation**” stage, indicating the failure reason that no direct train service exists between these two stations in the first round of QTAO process.
+In the next iteration of the process, the "Ticket Inquiry" module provides the closest alternative route, starting from Chongqing North Station to Chengdu East Station.
+In the subsequent round, three different train options are displayed for the passenger to choose from.
 
 <!-- Illustration of QTAO -->
 <div align="center"><img src="asset/illustration_of_ticket_inquiry.jpg" width=90% height=90%></div>
 
+## 3.CRFD-25
 We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://anonymous.4open.science/r/CRFD25)) dataset. Based on the CRFD-25, we develop a
 novel LLM-based algorithm for zero-shot conversational recommendation. This approach leverages feature-based recommendation alignment to ensure all suggested items are grounded in the provided dataset.
 
 <!-- Illustration of Food & Drink Recommendation -->
 <div align="center"><img src="asset/recommendation.jpg" width=70% height=70%></div>
+<div align="center">An illustration of the ticket inquiry process of LLM4Rail using QTAO prompting</div>
 
 
 # 📌 Website
