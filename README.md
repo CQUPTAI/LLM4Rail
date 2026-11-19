@@ -1,5 +1,5 @@
 # LLM4Rail
-This repo provides the source code & data of our paper: [LLM4Rail: An LLM-Augmented Railway Service Consulting Platform](www.baidu.com) (Arxiv 2025).
+This repo provides the source code & data of our paper: [LLM4Rail: An LLM-Augmented Personalized Railway Service Consulting Platform](www.baidu.com) ().
 
 # 🔍 Introduction
 ## 1.LLM4Rail
@@ -13,24 +13,28 @@ LLM4Rail consists of four core modules: <br>
 <!-- Illustration of LLM4Rail -->
 <img src="asset/website_en2.png">
 
-## 2.QTAO Prompting
-We propose the “Question-Thought-Action-Observation(QTAO)” prompting framework, which meticulously integrates verbal reasoning with task-oriented actions.
-When solving a task, QTAO follows an iterative reasoning process consisting of four distinct steps: 
-* **Question:** The initial prompts, together with the passenger’s query, are first fed into an LLM. <br>
-* **Thought:** By harnessing the LLM’s strong intent understanding capabilities, LLM4Rail infers the intention behind the passenger’s query. <br> 
-* **Action:** Based on this inferred intent, the system determines which external tool should be employed to address the request. <br>
-* **Observation:** The returned results by the selected tool are considered as external observations from the environment. <br>
+## 2.ER-QTAO Framework
+We propose the “**E**xperience-**R**etrieval **Q**uestion-**T**hought-**A**ction-**O**bservation (**ER-QTAO**)” prompting framework, which contains two key machanims to improve tool use.
 
 <!-- Illustration of QTAO -->
-<div align="center"><img src="asset/illustration_of_ticket_inquiry.jpg" width=90% height=90%></div>
+<div align="center"><img src="asset/illustration_of_ESR.png" width=90% height=90%></div>
+<div align="center">An illustration of the Experience Storage and Retrieval (ESR) mechanism</div>
 
 ## 3.CRFD-25
-We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://anonymous.4open.science/r/CRFD25)) dataset. Based on the CRFD-25, we develop a
+We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://anonymous.4open.science/r/CRFD25)) dataset. 
+
+<!-- Illustration of the CRFD dataset -->
+<div align="center"><img src="asset/illustration_of_CRFD.png" width=80% height=80%></div>
+<div align="center">An illustration of the CRFD dataset</div>
+
+<br>
+
+Based on the CRFD dataset, we develop a
 novel LLM-based algorithm for zero-shot conversational recommendation. This approach leverages feature-based recommendation alignment to ensure all suggested items are grounded in the provided dataset.
 
 <!-- Illustration of Food & Drink Recommendation -->
-<div align="center"><img src="asset/recommendation.jpg" width=70% height=70%></div>
-<div align="center">An illustration of the ticket inquiry process of LLM4Rail using QTAO prompting</div>
+<div align="center"><img src="asset/illustration_of_recommendation.png" width=100% height=100%></div>
+<div align="center">An illustration of the LLM-based zero-shot conversational recommeandation</div>
 
 
 # 📌 Website
