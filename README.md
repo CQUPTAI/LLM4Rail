@@ -29,7 +29,7 @@ We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](
 
 <br>
 
-## 4. LLM-Guided Item Alignment for LLM-based Zero-Shot CRS
+## 4. LLM-based Zero-Shot CRS with LLM-Guided Item Alignment
 Based on the CRFD dataset, we develop a
 novel LLM-based algorithm for zero-shot conversational recommendation. This approach leverages LLM-guided item alignment  to ensure all suggested items are grounded in the provided dataset.
 
