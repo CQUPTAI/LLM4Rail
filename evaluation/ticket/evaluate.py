@@ -11,6 +11,12 @@ parser.add_argument('--model', '-m', required=True, choices=['qwen-3', 'gpt-4o']
 parser.add_argument('--GPTKey', '-g', required=True, action='store')
 parser.add_argument('--QwenKey', '-q', required=True, action='store')
 parser.add_argument('--amapKey', '-a', required=True, action='store')
+parser.add_argument('--experiencePath', default='service/esr_experiences.json',
+                    help='JSON file used by the ESR experience pool')
+parser.add_argument('--retrievalK', type=int, default=3,
+                    help='number of query-related experiences to retrieve')
+parser.add_argument('--disableESR', action='store_true',
+                    help='run the QTAO ablation without ESR')
 args = parser.parse_args()
 
 users = pd.read_csv(args.userFile)
@@ -28,7 +34,12 @@ start = conf['start']
 end = conf['end']
 offset = conf['offset']
 
-agent = Agent(args.model)
+agent = Agent(
+    args.model,
+    esr_enabled=not args.disableESR,
+    experience_path=args.experiencePath,
+    retrieval_k=args.retrievalK,
+)
 
 with open(f"{file}", encoding="utf-8") as f:
     lines = f.readlines()
