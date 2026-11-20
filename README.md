@@ -21,7 +21,7 @@ We propose the “**E**xperience-**R**etrieval **Q**uestion-**T**hought-**A**cti
 <div align="center">An illustration of the Experience Storage and Retrieval (ESR) mechanism</div>
 
 ## 3.CRFD-25
-We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://anonymous.4open.science/r/CRFD25)) dataset. 
+We also introduce the **C**hinese **R**ailway **F**ood and **D**rink ([CRFD-25](https://github.com/CQUPTAI/CRFD-25)) dataset. 
 
 <!-- Illustration of the CRFD dataset -->
 <div align="center"><img src="asset/illustration_of_CRFD.png" width=80% height=80%></div>
