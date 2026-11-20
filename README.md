@@ -1,5 +1,5 @@
 # LLM4Rail
-This repo provides the source code & data of our paper: [LLM4Rail: An LLM-Augmented Personalized Railway Service Consulting Platform](www.baidu.com) ().
+This repo provides the source code & data of our paper: [LLM4Rail: An LLM-Augmented Personalized Railway Service Consulting Platform](https://arxiv.org/abs/2507.23377).
 
 # 🔍 Introduction
 ## 1.LLM4Rail
